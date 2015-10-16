@@ -1,0 +1,360 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"padding",
+				"padding-top"
+			],
+			[
+				"s",
+				"style	Tag"
+			],
+			[
+				"he",
+				"header	Tag"
+			],
+			[
+				"Not",
+				"NotFoundException"
+			],
+			[
+				"mod",
+				"modelsClass"
+			],
+			[
+				"mo",
+				"modelsFolders"
+			],
+			[
+				"mode",
+				"modelsClass"
+			],
+			[
+				"models",
+				"modelsFolders"
+			],
+			[
+				"for",
+				"foreach	foreach …"
+			],
+			[
+				"fo",
+				"foreach	foreach …"
+			],
+			[
+				"pos",
+				"posto_tipo"
+			],
+			[
+				"che",
+				"checked"
+			],
+			[
+				"boo",
+				"bootstrap"
+			],
+			[
+				"in",
+				"input	Tag"
+			],
+			[
+				"pr",
+				"produtos_tipo"
+			]
+		]
+	},
+	"buffers":
+	[
+		{
+			"settings":
+			{
+				"buffer_size": 0,
+				"line_ending": "Unix"
+			}
+		}
+	],
+	"build_system": "",
+	"command_palette":
+	{
+		"height": 392.0,
+		"selected_items":
+		[
+		],
+		"width": 530.0
+	},
+	"console":
+	{
+		"height": 125.0
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"file_history":
+	[
+		"/Users/yurifialho/Sites/sip/app/View/Posts/add.ctp",
+		"/Users/yurifialho/Sites/sip/app/Controller/PostsController.php",
+		"/Users/yurifialho/Sites/sip/app/View/Elements/flash_success.ctp",
+		"/Users/yurifialho/Sites/sip/app/View/Layouts/default.ctp",
+		"/Users/yurifialho/Sites/sip/app/View/Posts/index.ctp",
+		"/Users/yurifialho/Sites/sip/app/View/Pages/home2.ctp",
+		"/Users/yurifialho/Sites/sip/app/View/Pages/home.ctp",
+		"/Users/yurifialho/Sites/sip/app/Config/routes.php",
+		"/Users/yurifialho/Sites/sip/app/View/Layouts/default2.ctp",
+		"/Users/yurifialho/Sites/sip/app/View/Elements/footer.ctp",
+		"/Users/yurifialho/Sites/sip/app/View/Elements/menu.ctp",
+		"/Users/yurifialho/Sites/sip/app/Config/core.php",
+		"/Users/yurifialho/Sites/sip/app/Config/database.php",
+		"/Users/yurifialho/Sites/cakephp/.htaccess",
+		"/Users/yurifialho/Sites/sip/.htaccess",
+		"/Users/yurifialho/Sites/sip/app/webroot/.htaccess",
+		"/Users/yurifialho/Sites/cakephp/app/webroot/.htaccess",
+		"/Users/yurifialho/Sites/cakephp/app/.htaccess",
+		"/Users/yurifialho/Sites/sip/app/.htaccess",
+		"/Users/yurifialho/Sites/cakephp/app/View/Posts/index.ctp",
+		"/Users/yurifialho/Sites/cakephp/app/View/Layouts/default22.ctp",
+		"/Users/yurifialho/Sites/cakephp/app/View/Layouts/default.ctp",
+		"/Users/yurifialho/Sites/cakephp/app/View/Helper/FormTbHelper.php",
+		"/Users/yurifialho/Sites/cakephp/app/Controller/AppController.php",
+		"/Users/yurifialho/Downloads/app/View/Helper/SocialHelper.php",
+		"/Users/yurifialho/Downloads/app/View/Helper/FormTbHelper.php",
+		"/Users/yurifialho/Downloads/app/View/Helper/AppHelper.php",
+		"/Users/yurifialho/Sites/cakephp/app/View/Posts/view.ctp",
+		"/Users/yurifialho/Sites/cakephp/app/View/Posts/add.ctp",
+		"/Users/yurifialho/Sites/cakephp/app/Model/Post.php",
+		"/Users/yurifialho/Sites/cakephp/app/View/Posts/edit.ctp",
+		"/Users/yurifialho/Sites/cakephp/app/Controller/PostsController.php",
+		"/Users/yurifialho/Sites/cakephp/app/Config/routes.php",
+		"/Users/yurifialho/Sites/cakephp/app/Config/bootstrap.php",
+		"/Users/yurifialho/Sites/cakephp/app/Config/core.php",
+		"/Users/yurifialho/Sites/cakephp/app/Config/database.php",
+		"/Users/yurifialho/Sites/cakephp/app/Config/database.php.default",
+		"/Users/yurifialho/Dropbox/PROJETOS/EXERCITO/RANCHO/rancho/helpers/application_helper.php",
+		"/Users/yurifialho/Dropbox/PROJETOS/EXERCITO/RANCHO/rancho/includes/database.config.php",
+		"/Users/yurifialho/Dropbox/PROJETOS/EXERCITO/RANCHO/rancho/controllers/usuariocontroller.php",
+		"/Users/yurifialho/Dropbox/PROJETOS/EXERCITO/RANCHO/rancho/teste.php",
+		"/Users/yurifialho/Dropbox/PROJETOS/EXERCITO/RANCHO/rancho/views/aranchamento/aranchamento_rancho_lista.php",
+		"/Users/yurifialho/Dropbox/PROJETOS/EXERCITO/RANCHO/rancho/libs/phpactiverecord/lib/Validations.php",
+		"/Users/yurifialho/Dropbox/PROJETOS/EXERCITO/RANCHO/rancho/controllers/usuariotipocontroller.php",
+		"/Users/yurifialho/Dropbox/PROJETOS/EXERCITO/RANCHO/rancho/models/UsuarioTipo.php",
+		"/Users/yurifialho/Dropbox/PROJETOS/EXERCITO/RANCHO/rancho/libs/phpactiverecord/ActiveRecord.php",
+		"/Users/yurifialho/Dropbox/PROJETOS/EXERCITO/RANCHO/rancho/views/aranchamento/aranchamento_lista.php",
+		"/Users/yurifialho/Dropbox/PROJETOS/EXERCITO/RANCHO/rancho/views/usuario/usuario_form.php",
+		"/Users/yurifialho/Dropbox/PROJETOS/EXERCITO/RANCHO/rancho/controllers/aranchamentocontroller.php",
+		"/Users/yurifialho/Dropbox/PROJETOS/EXERCITO/RANCHO/rancho/login.php",
+		"/Users/yurifialho/Dropbox/PROJETOS/EXERCITO/RANCHO/rancho/views/usuario/usuario_lista.php",
+		"/Users/yurifialho/Dropbox/PROJETOS/EXERCITO/RANCHO/rancho/includes/header.php",
+		"/Users/yurifialho/Dropbox/PROJETOS/EXERCITO/RANCHO/rancho/models/Setor.php",
+		"/Users/yurifialho/Dropbox/PROJETOS/EXERCITO/RANCHO/rancho/models/Omds.php",
+		"/Users/yurifialho/Dropbox/PROJETOS/EXERCITO/RANCHO/rancho/models/Usuario.php",
+		"/Users/yurifialho/Dropbox/PROJETOS/EXERCITO/RANCHO/rancho/models/Aranchamento.php",
+		"/Users/yurifialho/Dropbox/PROJETOS/EXERCITO/RANCHO/rancho/logout.php",
+		"/Users/yurifialho/Dropbox/PROJETOS/EXERCITO/RANCHO/rancho/index.php",
+		"/Users/yurifialho/Dropbox/PROJETOS/EXERCITO/RANCHO/rancho/views/usuario_tipo/usuario_tipo_lista.php",
+		"/Users/yurifialho/Dropbox/PROJETOS/EXERCITO/RANCHO/rancho/includes/footer.php",
+		"/Users/yurifialho/Dropbox/PROJETOS/EXERCITO/RANCHO/rancho/includes/messages.php",
+		"/Users/yurifialho/Dropbox/PROJETOS/EXERCITO/RANCHO/rancho/css/bootstrap.css",
+		"/Users/yurifialho/Dropbox/PROJETOS/EXERCITO/RANCHO/rancho/views/usuario_tipo/usuario_tipo_form.php",
+		"/Users/yurifialho/Dropbox/PROJETOS/EXERCITO/RANCHO/rancho/models/Posto.php",
+		"/Users/yurifialho/Dropbox/PROJETOS/EXERCITO/RANCHO/rancho/controllers/produtostipocontroller.php",
+		"/Users/yurifialho/Dropbox/PROJETOS/EXERCITO/RANCHO/sync_site_macos.sh",
+		"/Users/yurifialho/Dropbox/PROJETOS/EXERCITO/RANCHO/rancho/views/usuario_tipo/usuario_tipo_lista.html",
+		"/Users/yurifialho/Dropbox/PROJETOS/EXERCITO/RANCHO/rancho/controllers/applicationcontroller.php",
+		"/Users/yurifialho/Dropbox/PROJETOS/EXERCITO/RANCHO/rancho/models/Produto.php",
+		"/Users/yurifialho/Dropbox/PROJETOS/EXERCITO/CAUTELAONLINE/cautelaonline/includes/messages.php",
+		"/Users/yurifialho/Dropbox/PROJETOS/EXERCITO/CAUTELAONLINE/cautelaonline/views/produtos_tipos/produtos_tipos_form.php",
+		"/Users/yurifialho/Dropbox/PROJETOS/EXERCITO/CAUTELAONLINE/cautelaonline/views/produtos/produtos_form.php",
+		"/Users/yurifialho/Dropbox/PROJETOS/EXERCITO/CAUTELAONLINE/cautelaonline/views/produtos/produtos_lista.php",
+		"/Users/yurifialho/Dropbox/PROJETOS/EXERCITO/CAUTELAONLINE/cautelaonline/views/produtos_contas/produtos_contas_lista.php",
+		"/Users/yurifialho/Dropbox/PROJETOS/EXERCITO/CAUTELAONLINE/cautelaonline/views/produtos_tipos/produtos_tipos_lista.php",
+		"/Users/yurifialho/Dropbox/PROJETOS/EXERCITO/CAUTELAONLINE/cautelaonline/views/produtos_contas/produtos_contas_form.php",
+		"/Users/yurifialho/Dropbox/PROJETOS/EXERCITO/CAUTELAONLINE/cautelaonline/models/ProdutosConta.php",
+		"/Users/yurifialho/Dropbox/PROJETOS/EXERCITO/CAUTELAONLINE/cautelaonline/controllers/produtoscontascontroller.php",
+		"/Users/yurifialho/Dropbox/PROJETOS/EXERCITO/CAUTELAONLINE/cautelaonline/libs/phpactiverecord/lib/Validations.php",
+		"/Users/yurifialho/Dropbox/PROJETOS/EXERCITO/CAUTELAONLINE/cautelaonline/libs/phpactiverecord/lib/Column.php",
+		"/Users/yurifialho/Dropbox/PROJETOS/EXERCITO/CAUTELAONLINE/cautelaonline/controllers/produtoscontroller.php",
+		"/Users/yurifialho/Dropbox/PROJETOS/EXERCITO/CAUTELAONLINE/cautelaonline/controllers/produtostipocontroller.php",
+		"/Users/yurifialho/Dropbox/PROJETOS/EXERCITO/CAUTELAONLINE/cautelaonline/models/ProdutosTipo.php",
+		"/Users/yurifialho/Dropbox/PROJETOS/EXERCITO/CAUTELAONLINE/cautelaonline/models/Produto.php",
+		"/Users/yurifialho/Dropbox/PROJETOS/EXERCITO/CAUTELAONLINE/cautelaonline/includes/database.config.php",
+		"/Users/yurifialho/Dropbox/PROJETOS/EXERCITO/CAUTELAONLINE/cautelaonline/includes/header.php",
+		"/Users/yurifialho/Dropbox/PROJETOS/EXERCITO/CAUTELAONLINE/cautelaonline/code/produtos_tipos/produtos_tipos_form.php",
+		"/Users/yurifialho/Dropbox/PROJETOS/EXERCITO/CAUTELAONLINE/cautelaonline/code/produtos_tipos/produtos_tipos_lista.php",
+		"/Users/yurifialho/Dropbox/PROJETOS/EXERCITO/CAUTELAONLINE/cautelaonline/index.php",
+		"/Users/yurifialho/Dropbox/PROJETOS/EXERCITO/CAUTELAONLINE/cautelaonline/includes/footer.php",
+		"/Users/yurifialho/Dropbox/PROJETOS/EXERCITO/CAUTELAONLINE/cautelaonline/controllers/applicationcontroller.php",
+		"/Users/yurifialho/Dropbox/PROJETOS/EXERCITO/CAUTELAONLINE/cautelaonline/code/setor_lista.php",
+		"/Users/yurifialho/Dropbox/PROJETOS/EXERCITO/CAUTELAONLINE/sync_site_macos.sh",
+		"/Users/yurifialho/Dropbox/PROJETOS/EXERCITO/CAUTELAONLINE/cautelaonline/code/processo_action.php",
+		"/Users/yurifialho/Dropbox/PROJETOS/EXERCITO/CAUTELAONLINE/cautelaonline/libs/phpactiverecord/examples/simple/simple_with_options.php",
+		"/Users/yurifialho/Dropbox/PROJETOS/EXERCITO/CAUTELAONLINE/cautelaonline/libs/phpactiverecord/examples/orders/orders.php",
+		"/Users/yurifialho/Dropbox/PROJETOS/EXERCITO/CAUTELAONLINE/cautelaonline/libs/php-activerecord/test/ActiveRecordFindTest.php",
+		"/Users/yurifialho/Sites/basic/config/db.php",
+		"/Users/yurifialho/Dropbox/PROJETOS/EXERCITO/CAUTELAONLINE/cautelaonline/login.php",
+		"/Users/yurifialho/Dropbox/PROJETOS/EXERCITO/CAUTELAONLINE/cautelaonline/code/common.php",
+		"/Users/yurifialho/Dropbox/PROJETOS/EXERCITO/CAUTELAONLINE/cautelaonline/code/config.php",
+		"/Users/yurifialho/Dropbox/PROJETOS/EXERCITO/CAUTELAONLINE/sync_site_macos",
+		"/Users/yurifialho/Dropbox/PROJETOS/EXERCITO/VIDEOCONFERENCIA/Tandera/src/omds.as",
+		"/Library/WebServer/Documents/index.html.en",
+		"/Users/yurifialho/Projetos/DSM/DEPLOYER/pymsenhas/app/controllers/application_controller.rb",
+		"/Users/yurifialho/Projetos/DSM/DEPLOYER/pymsenhas/config/routes.rb",
+		"/Users/yurifialho/Downloads/html5-webapp-jetty/src/main/webapp/WEB-INF/web.xml",
+		"/Volumes/BSBDRIVER/compag-git/scripts/carrega_extratos.py",
+		"/Users/yurifialho/Downloads/html5-webapp-jetty/pom.xml",
+		"/Users/yurifialho/Desktop/base.py"
+	],
+	"find":
+	{
+		"height": 35.0
+	},
+	"find_in_files":
+	{
+		"height": 0.0,
+		"where_history":
+		[
+			"/Users/yurifialho/Sites/sip",
+			"/Users/yurifialho/Sites/cakephp"
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"input",
+			"pagina",
+			"navigation",
+			"’",
+			"validate",
+			"Errors",
+			"getVariables()",
+			"setting",
+			"page",
+			".php",
+			"sql",
+			"require",
+			"login.php",
+			"session_start"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+			"'"
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"selected": 0,
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"settings":
+					{
+						"buffer_size": 0,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Text/Plain text.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 0.0
+	},
+	"input":
+	{
+		"height": 31.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.exec":
+	{
+		"height": 100.0
+	},
+	"replace":
+	{
+		"height": 64.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+			[
+				"route",
+				"config/routes.rb"
+			]
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"show_minimap": true,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 218.0,
+	"status_bar_visible": true
+}

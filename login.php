@@ -16,7 +16,7 @@
       if($objUsuario->senha == md5($senha)) {
         $_SESSION['idusuario'] = $objUsuario->id;
         $_COOKIE['idusuario'] = $objUsuario->id;
-        header('Location: '."/~yurifialho/rancho/views/aranchamento/aranchamento_lista.php");
+        header('Location: '."/~yurifialho/cautela/views/item_tipo/item_tipo_lista.php");
       } else {
         $msg_erro = "Usuario ou senha invalida!";
       }
@@ -35,7 +35,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>RANCHO - LOGIN</title>
+    <title>CAUTELA - LOGIN</title>
 
     <!-- Bootstrap core CSS -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
@@ -61,7 +61,7 @@
     <?php } ?>
     <div class="container">
       <form class="form-signin" role="form" action="login.php" method="post">
-        <h2 class="form-signin-heading">RANCHOnLine</h2>
+        <h2 class="form-signin-heading">Cautelas - OnLine</h2>
         <label for="input" class="sr-only">Usuario</label>
         <input type="input" id="input" name="usuario" class="form-control" placeholder="Usuario" required autofocus>
         <label for="inputPassword" class="sr-only">Senha</label>
