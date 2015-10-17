@@ -36,12 +36,17 @@
         <td><?php echo $itemtipo->id ?></td>
         <td><?php echo $itemtipo->descricao ?></td>
         <td>
+          <a href="item_tipo_form.php?action=update&id=<?php echo $itemtipo->id ?>&descricao=<?php echo $itemtipo->descricao ?>">
+          <button type="button" class="btn btn-default btn-xs">
+            <span class="glyphicon glyphicon-pencil"></span> Editar
+          </button>
+          </a>
           <a href="../../controllers/itemtipocontroller.php?action=delete&id=<?php echo $itemtipo->id ?>"
             onclick="return confirm('Deseja realmente remover?');">
           <button type="button" class="btn btn-danger btn-xs">
             <span class="glyphicon glyphicon-trash"></span> Excluir
           </button>
-        </a>
+          </a>
         </td>
       </tr>
       <?php } ?>

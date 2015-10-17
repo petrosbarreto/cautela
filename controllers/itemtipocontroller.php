@@ -45,7 +45,17 @@
 		} else {
 			$msg_erro = "Item já foi inserido!";	
 		}
-	} 	
+	} elseif($action == "update") {
+		$itemtipo = ItemTipo::find($id);
+		if($itemtipo != null) {
+			$itemtipo->descricao = $descricao;
+			if($itemtipo->save()){
+				$msg = "Objeto salvo com sucesso!";
+			} else {
+				$msg_erro = "Nao foi possivel salvar objeto!";
+			}
+		}
+	}  	
 	
 	header('Location: '."../views/item_tipo/item_tipo_lista.php?msg=".$msg."&msg_erro=".$msg_erro."&mes=".$mes);	
 	

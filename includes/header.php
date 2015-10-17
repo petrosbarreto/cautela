@@ -45,6 +45,8 @@
     <div id="navbar" class="collapse navbar-collapse">
       <ul class="nav navbar-nav">
         <li><a href="<?php echo $BASE ?>views/item_tipo/item_tipo_lista.php">Item Tipo</a></li>
+        <li><a href="<?php echo $BASE ?>views/local_tipo/local_tipo_lista.php">Local Tipo</a></li>
+        <li><a href="<?php echo $BASE ?>views/local/local_lista.php">Local</a></li>
         <li><a href="logout.php">Logout (<?php #echo (Usuario::find($_SESSION['idusuario'])->nome)?>)</a></li>
       </ul>
     </div><!--/.nav-collapse -->
