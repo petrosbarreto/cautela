@@ -3,17 +3,17 @@
 # DATABASE.CONFIG.PHP
 #--------------------------------------------------------------------------
 #
-#	@author: Yuri Fialho - 2ยบ TEN FIALHO
-#	@since: 10/12/2014
+#	@author: Yuri Fialho - 2บ TEN FIALHO
+#	@since: 17/10/2015
 #	@contact: yurirfialho@gmail.com
 #
 #--------------------------------------------------------------------------
 	
 	#DB username
-	$username = "yuri";
-	$password = "yuri";
+	$username = "root";
+	$password = "";
 	$host	  = "127.0.0.1";
-	$database = "rancho";
+	$database = "cautela_db";
 
 	require_once dirname(__FILE__) . '/../libs/phpactiverecord/ActiveRecord.php';
 
@@ -28,10 +28,10 @@
 	}
 	
 	#Initialize database
-	ActiveRecord\Config::initialize(function($cfg)
+	ActiveRecord\Config::initialize(function($cfg) use(&$username, &$password, &$host, &$database)
 	{
     	$cfg->set_model_directory('.');
-    	$cfg->set_connections(array('development' => 'mysql://yuri:yuri@127.0.0.1/rancho'));
+    	$cfg->set_connections(array('development' => "mysql://$username:$password@$host/$database"));
 	});
 
 ?>

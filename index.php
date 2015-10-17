@@ -1,5 +1,3 @@
-
-<?php include "includes/header.php"; ?>
-
-
-<?php include "includes/header.php"; ?>
+<?php 
+	header('Location: '."views/item_tipo/item_tipo_lista.php");
+?>
