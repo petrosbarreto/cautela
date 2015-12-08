@@ -9,6 +9,9 @@ class Local extends ActiveRecord\Model {
 	static $belongs_to = array(
 		array('local_tipo', 'class_name' => 'LocalTipo', 'foreign_key' => 'local_tipo_id')
 	);
+	static $has_many = array(
+		array('item_locals')	
+	);
 }
 
 ?>

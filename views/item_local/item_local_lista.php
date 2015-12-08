@@ -4,13 +4,13 @@
 <body>
 <?php include      "../../includes/messages.php"; ?>
 <div class="panel panel-default">
-  <div class="panel-heading">Item</div>
+  <div class="panel-heading">Item Local</div>
   <div class="panel-body">
    <div class="panel panel-default">
     
     <div class="panel-body">
-    <form class="form-inline" role="form" action="../../controllers/itemcontroller.php" method="post">
-      <input type="hidden" id="action" name="action" value="new"/>
+    <form class="form-inline" role="form" action="../../controllers/itemlocalcontroller.php" method="post">
+      <input type="hidden" id="action" name="action" value="index"/>
       <div class="form-group">
         <div class="col-sm-10">
           <input type="text"
@@ -27,30 +27,26 @@
       </div>
       <div class="form-group">
         <div class="col-sm-10">
-          <input type="text"
-               placeholder="Descrição" id="descricao" name="descricao"
-               value="">
-        </div>
-      </div>
-      <div class="form-group">
-        <div class="col-sm-10">
-          <input type="text" required="true"
-               placeholder="Quantidade" id="qtd_total" name="qtd_total"
-               value="1" size="3">
-        </div>
-      </div>
-      <div class="form-group">
-        <div class="col-sm-10">
           <select id="item_tipo_id" name="item_tipo_id" class="form-control" >
-          	<option value="">Todos</option>
+          	<option value="">Tipo Item - Todos</option>
           <?php foreach (ItemTipo::find('all', array('order' => 'descricao asc')) as $itemtipo) { ?>
           	<option value="<?php echo $itemtipo->id ?>"><?php echo $itemtipo->descricao ?></option>
           <?php } ?>
           </select>
         </div>
       </div>
-      <button type="submit" class="btn btn-info" onclick="jQuery('#action').val('index')">Buscar</button>
-      <button type="submit" class="btn btn-success" onclick="jQuery('#action').val('new')">Salvar</button>
+      <div class="form-group">
+        <div class="col-sm-10">
+          <select id="item_tipo_id" name="item_tipo_id" class="form-control" >
+          	<option value="">Local - Todos</option>
+          	<option value="NULL">Sem Local</option>
+          <?php foreach (Local::find('all', array('order' => 'descricao asc')) as $local) { ?>
+          	<option value="<?php echo $local->id ?>"><?php echo $local->descricao ?></option>
+          <?php } ?>
+          </select>
+        </div>
+      </div>
+      <button type="submit" class="btn btn-info">Buscar</button>
     </form>
     </div>
     </div>
@@ -60,36 +56,21 @@
         <th>Cód.</th>
         <th>Patrimônio</th>
         <th>Nome</th>
-        <th>Descrição</th>
-        <th>Qtd. Total</th>
+        <th>Qtd.</th>
         <th>Tipo</th>
-        <th>Acao</th>
+        <th>Local</th>
+        <th>Ação</th>
       </tr>
     </thead>
     <tbody>
-      <?php
-      	$query = "1=1";
-       
-      	if(isset($_GET['patrimonio'])) {
-      		$patrimonio = $_GET['patrimonio'];
-      		$query.=" and patrimonio = '$patrimonio' " ;
-      	}
-      	if(isset($_GET['nome'])) {
-      		$nome = $_GET['nome'];
-      		$query.=" and nome LIKE '%$nome%' ";
-      	}
-      	if(isset($_GET['tipo'])) {
-      		$tipo = $_GET['tipo'];
-      		$query .=" and item_tipo_id = $tipo ";
-      	}
-      	foreach (Item::find('all', array('conditions' => $query, 'order' => 'nome asc')) as $item) { ?>
+      <?php foreach (Item::find('all', array('order' => 'nome asc')) as $item) { ?>
       <tr>
         <td><?php echo $item->id ?></td>
         <td><?php echo $item->patrimonio ?></td>
         <td><?php echo $item->nome ?></td>
-        <td><?php echo $item->descricao ?></td>
         <td><?php echo $item->qtd_total ?></td>
         <td><?php echo $item->item_tipo->descricao ?></td>
+        <td><?php echo $item->locals != null ?  $item->locals[0]->descricao : "-" ?></td>
         <td>
           <a href="item_form.php?action=update&id=<?php echo $item->id ?>">
           <button type="button" class="btn btn-default btn-xs">
