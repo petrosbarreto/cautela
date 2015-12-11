@@ -12,7 +12,7 @@
   <button type="button" class="close" data-dismiss="alert">
     <span aria-hidden="true">&times;</span><span class="sr-only">Close</span>
   </button>
-  <strong>Erro!</strong> <?php echo $_GET['msg_erro']; ?><?php echo $_SESSION['msg_erro']; ?>
+  <strong>Erro!</strong> <?php echo isset($_GET['msg_erro']) ? $_GET['msg_erro'] : ""; ?><?php echo isset($_SESSION['msg_erro']) ? $_SESSION['msg_erro'] : ""; ?>
 </div>
 <?php 
 	unset($_SESSION['msg_erro']);

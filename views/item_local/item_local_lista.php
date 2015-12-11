@@ -58,7 +58,7 @@
         <th>Nome</th>
         <th>Qtd.</th>
         <th>Tipo</th>
-        <th>Local</th>
+        <th>Locais</th>
         <th>Ação</th>
       </tr>
     </thead>
@@ -66,21 +66,27 @@
       <?php foreach (Item::find('all', array('order' => 'nome asc')) as $item) { ?>
       <tr>
         <td><?php echo $item->id ?></td>
-        <td><?php echo $item->patrimonio ?></td>
+        <td><?php echo $item->patrimonio != null ? $item->patrimonio : "-" ?></td>
         <td><?php echo $item->nome ?></td>
         <td><?php echo $item->qtd_total ?></td>
         <td><?php echo $item->item_tipo->descricao ?></td>
-        <td><?php echo $item->locals != null ?  $item->locals[0]->descricao : "-" ?></td>
         <td>
-          <a href="item_form.php?action=update&id=<?php echo $item->id ?>">
+        	<?php
+        		$count = 0;
+        		foreach($item->locals as $local) {
+        			$count++;
+        			echo $local->descricao;
+        			if($count < count($item->locals)) echo ", ";
+				}
+				if($count == 0) {
+					echo "-";
+				} 
+        	?>
+        </td>
+        <td>
+          <a href="item_local_form.php?id=<?php echo $item->id ?>">
           <button type="button" class="btn btn-default btn-xs">
-            <span class="glyphicon glyphicon-pencil"></span> Editar
-          </button>
-          </a>
-          <a href="../../controllers/itemcontroller.php?action=delete&id=<?php echo $item->id ?>"
-            onclick="return confirm('Deseja realmente remover?');">
-          <button type="button" class="btn btn-danger btn-xs">
-            <span class="glyphicon glyphicon-trash"></span> Excluir
+            <span class="glyphicon glyphicon-folder-open"></span> Local
           </button>
           </a>
         </td>
