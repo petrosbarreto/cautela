@@ -12,6 +12,9 @@
 		$item_id 	= isset($_POST['item_id']) ? $_POST['item_id'] : NULL;
 		$local_id	= isset($_POST['local_id']) ? $_POST['local_id'] : NULL;
 		$qtd		= isset($_POST['qtd']) ? $_POST['qtd'] : NULL;
+		$patrimonio = isset($_POST['patrimonio']) ? $_POST['patrimonio'] : NULL;
+		$nome		= isset($_POST['nome']) ? $_POST['nome'] : NULL;
+		$item_tipo_id = isset($_POST['item_tipo_id']) ? $_POST['item_tipo_id'] : NULL;
 	} else {
 		$action    = $_GET['action'];
 		$item_id 	= isset($_GET['item_id']) ? $_GET['item_id'] : NULL;
@@ -20,7 +23,18 @@
 	
 		$query = "";
 	if($action == "index") {
-
+		if($patrimonio != NULL) {
+			$query .= "&patrimonio=$patrimonio";
+		}
+		if($nome != NULL && strlen($nome) >= 4){
+			$query .= "&nome=$nome";
+		}
+		if($local_id != NULL) {
+			$query .= "&local_id=$local_id";
+		}
+		if($item_tipo_id != NULL) {
+			$query .= "&tipo=$item_tipo_id";
+		}
 	} elseif($action == "delete") {
 		if($item_id != null && $local_id != null) {
 			$itemlocal = ItemLocal::first(array('conditions' => "item_id = $item_id and local_id = $local_id"));
@@ -53,8 +67,11 @@
 	} elseif($action == "update") {
 		
 	}  	
-	
-	header('Location: '."../views/item_local/item_local_form.php?id=$item_id&msg=$msg&msg_erro=$msg_erro&mes=$mes$query");	
+	if($action == 'index') {
+		header('Location: '."../views/item_local/item_local_lista.php?msg=$msg&msg_erro=$msg_erro&mes=$mes$query");
+	} else {
+		header('Location: '."../views/item_local/item_local_form.php?id=$item_id&msg=$msg&msg_erro=$msg_erro&mes=$mes$query");	
+	}
 	
 	function validate_new($qtd, $item_id, $local_id) {
 		

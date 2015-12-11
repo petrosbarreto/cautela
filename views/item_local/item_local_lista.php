@@ -37,7 +37,7 @@
       </div>
       <div class="form-group">
         <div class="col-sm-10">
-          <select id="item_tipo_id" name="item_tipo_id" class="form-control" >
+          <select id="local_id" name="local_id" class="form-control" >
           	<option value="">Local - Todos</option>
           	<option value="NULL">Sem Local</option>
           <?php foreach (Local::find('all', array('order' => 'descricao asc')) as $local) { ?>
@@ -63,7 +63,27 @@
       </tr>
     </thead>
     <tbody>
-      <?php foreach (Item::find('all', array('order' => 'nome asc')) as $item) { ?>
+      <?php $query = "1=1";
+      		$joins = array();
+       
+      	if(isset($_GET['patrimonio'])) {
+      		$patrimonio = $_GET['patrimonio'];
+      		$query.=" and patrimonio = '$patrimonio' " ;
+      	}
+      	if(isset($_GET['nome'])) {
+      		$nome = $_GET['nome'];
+      		$query.=" and nome LIKE '%$nome%' ";
+      	}
+      	if(isset($_GET['tipo'])) {
+      		$tipo = $_GET['tipo'];
+      		$query .=" and item_tipo_id = $tipo ";
+      	}
+      	if(isset($_GET['local_id'])) {
+      		$tipo = $_GET['local_id'];
+      		$joins = array('item_locals');
+      		$query .=" and item_local.local_id = $tipo ";
+      	}
+      	foreach (Item::find('all', array('joins' => $joins,'conditions' => $query, 'order' => 'nome asc')) as $item) { ?>
       <tr>
         <td><?php echo $item->id ?></td>
         <td><?php echo $item->patrimonio != null ? $item->patrimonio : "-" ?></td>
@@ -86,7 +106,7 @@
         <td>
           <a href="item_local_form.php?id=<?php echo $item->id ?>">
           <button type="button" class="btn btn-default btn-xs">
-            <span class="glyphicon glyphicon-folder-open"></span> Local
+            <span class="glyphicon glyphicon-folder-open">&nbsp;</span> Local
           </button>
           </a>
         </td>
