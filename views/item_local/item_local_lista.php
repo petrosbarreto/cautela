@@ -15,14 +15,14 @@
         <div class="col-sm-10">
           <input type="text"
                placeholder="Patrimônio" id="patrimonio" name="patrimonio"
-               value="">
+               value="" class="form-control">
         </div>
       </div>
       <div class="form-group">
         <div class="col-sm-10">
           <input type="text"
                placeholder="Nome" id="nome" name="nome"
-               value="">
+               value="" class="form-control">
         </div>
       </div>
       <div class="form-group">
@@ -46,7 +46,8 @@
           </select>
         </div>
       </div>
-      <button type="submit" class="btn btn-info">Buscar</button>
+      <button type="submit" class="btn btn-info">
+      	<span class="glyphicon glyphicon-search">&nbsp;</span>Buscar</button>
     </form>
     </div>
     </div>

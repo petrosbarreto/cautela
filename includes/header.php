@@ -8,10 +8,10 @@
 	}
  
 	#verifica se usuario esta logado
-/*	if(!isset($_SESSION['idusuario'])) {
-		header('Location: '."/~yurifialho/rancho/login.php");	
+	if(!isset($_SESSION['idusuario'])) {
+		header("Location: ".$BASE."logout.php");	
 	}
-*/
+
 ?>
 <!DOCTYPE html>
 <html>
@@ -49,7 +49,7 @@
         <li><a href="<?php echo $BASE ?>views/local_tipo/local_tipo_lista.php">Local Tipo</a></li>
         <li><a href="<?php echo $BASE ?>views/local/local_lista.php">Local</a></li>
         <li><a href="<?php echo $BASE ?>views/item_local/item_local_lista.php">Item Local</a></li>
-        <li><a href="logout.php">Logout (<?php #echo (Usuario::find($_SESSION['idusuario'])->nome)?>)</a></li>
+        <li><a href="<?php echo $BASE ?>logout.php">Logout (<?php echo $_SESSION['nomeusuario'] ?>)</a></li>
       </ul>
     </div><!--/.nav-collapse -->
   </div>

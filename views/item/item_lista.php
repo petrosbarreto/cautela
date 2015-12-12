@@ -15,28 +15,21 @@
         <div class="col-sm-10">
           <input type="text"
                placeholder="Patrimônio" id="patrimonio" name="patrimonio"
-               value="">
+               value="" class="form-control">
         </div>
       </div>
       <div class="form-group">
         <div class="col-sm-10">
           <input type="text"
                placeholder="Nome" id="nome" name="nome"
-               value="">
-        </div>
-      </div>
-      <div class="form-group">
-        <div class="col-sm-10">
-          <input type="text"
-               placeholder="Descrição" id="descricao" name="descricao"
-               value="">
+               value="" class="form-control">
         </div>
       </div>
       <div class="form-group">
         <div class="col-sm-10">
           <input type="text" required="true"
                placeholder="Quantidade" id="qtd_total" name="qtd_total"
-               value="1" size="3">
+               value="1" size="2" class="form-control">
         </div>
       </div>
       <div class="form-group">
@@ -49,8 +42,10 @@
           </select>
         </div>
       </div>
-      <button type="submit" class="btn btn-info" onclick="jQuery('#action').val('index')">Buscar</button>
-      <button type="submit" class="btn btn-success" onclick="jQuery('#action').val('new')">Salvar</button>
+      <button type="submit" class="btn btn-info" onclick="jQuery('#action').val('index')">
+      	<span class="glyphicon glyphicon-search">&nbsp;</span>Buscar</button>
+      <button type="submit" class="btn btn-success" onclick="jQuery('#action').val('new')">
+      	<span class="glyphicon glyphicon-floppy-disk">&nbsp;</span>Salvar</button>
     </form>
     </div>
     </div>

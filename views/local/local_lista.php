@@ -27,7 +27,8 @@
           </select>
         </div>
       </div>
-      <button type="submit" class="btn btn-success">Salvar</button>
+      <button type="submit" class="btn btn-success">
+      	<span class="glyphicon glyphicon-floppy-disk">&nbsp;</span>Salvar</button>
     </form>
     </div>
     </div>

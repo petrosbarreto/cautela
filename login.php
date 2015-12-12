@@ -4,25 +4,39 @@
   
 
   require_once "includes/database.config.php";
+  require_once "includes/ldap.php";
 
-  $usuario = $_POST['usuario'];
-  $senha   = $_POST['senha'];
+  $usuario = isset($_POST['usuario']) ? $_POST['usuario'] : null;
+  $senha   = isset($_POST['senha']) ? $_POST['senha'] : null;
 
   
   if($usuario != "" && isset($senha)) {
-    $objUsuario = Usuario::find('first', array('conditions' => "login = '".$usuario."' and senha = md5('".$senha."') "));
-    #$objUsuario = Usuario::find(1);
-    if(isset($objUsuario)) {
-      if($objUsuario->senha == md5($senha)) {
-        $_SESSION['idusuario'] = $objUsuario->id;
-        $_COOKIE['idusuario'] = $objUsuario->id;
-        header('Location: '."/~yurifialho/cautela/views/item_tipo/item_tipo_lista.php");
-      } else {
-        $msg_erro = "Usuario ou senha invalida!";
-      }
-    } else {
-      $msg_erro = "Usuario ou senha invalida!!";
-    }
+  	
+  	if(checkUserAndPassword($usuario, $senha)) {
+  		$objUsuario = Usuario::find('first', array('conditions' => "login = '$usuario'"));
+  		if($objUsuario) {
+  			$objUsuario->senha = md5($senha);
+  		} else {
+  			$objUsuario = new Usuario();
+  			$objUsuario->login = $usuario;
+  			$objUsuario->senha = $senha;
+  		}
+  		$objUsuario->save();
+  		$_SESSION['idusuario'] = $objUsuario->id;
+  		$_SESSION['nomeusuario'] = $objUsuario->login;
+  		$_COOKIE['idusuario'] = $objUsuario->id;
+  		header('Location: '."views/item_tipo/item_tipo_lista.php");
+  	} else {
+  		$objUsuario = Usuario::find('first', array('conditions' => "login = '$usuario' and senha = md5('$senha')"));
+  		if($objUsuario) {
+  			$_SESSION['idusuario'] = $objUsuario->id;
+  			$_SESSION['nomeusuario'] = $objUsuario->login;
+  			$_COOKIE['idusuario'] = $objUsuario->id;
+  			header('Location: '."views/item_tipo/item_tipo_lista.php");
+  		} else {
+  			$msg_erro = "Usuario ou senha invalida!!";
+  		}
+  	}
   }
 
 ?>
@@ -65,7 +79,7 @@
         <label for="input" class="sr-only">Usuario</label>
         <input type="input" id="input" name="usuario" class="form-control" placeholder="Usuario" required autofocus>
         <label for="inputPassword" class="sr-only">Senha</label>
-        <input type="password" id="inputPassword" name="senha" class="form-control" placeholder="Senha" required>
+        <input type="password" id="senha" name="senha" class="form-control" placeholder="Senha" required>
         <button class="btn btn-lg btn-primary btn-block" type="submit">Entrar</button>
       </form>
 
