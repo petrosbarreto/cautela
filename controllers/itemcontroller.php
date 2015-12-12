@@ -15,11 +15,12 @@
 		$qtd_total = isset($_POST['qtd_total']) ? $_POST['qtd_total'] : NULL;
 		$item_tipo_id = isset($_POST['item_tipo_id']) ? $_POST['item_tipo_id'] : NULL;
 		$patrimonio = isset($_POST['patrimonio']) ? $_POST['patrimonio'] : NULL;
+		$permanente = isset($_POST['permanente']) ? $_POST['permanente'] : 0;
 	} else {
 		$action    = $_GET['action'];
 		$id 	   = $_GET['id'];
 	}
-
+	
 		$query = "";
 	if($action == "index") {
 		if($patrimonio != NULL) {
@@ -47,6 +48,7 @@
 			$item->qtd_total = $qtd_total;
 			$item->item_tipo_id = $item_tipo_id;
 			$item->patrimonio = $patrimonio;
+			$item->permanente = $permanente;
 			
 			if($item->save()){
 				$msg = "Objeto salvo com sucesso!";
@@ -64,6 +66,7 @@
 			$item->qtd_total = $qtd_total;
 			$item->item_tipo_id = $item_tipo_id;
 			$patrimonio->patrimonio = $patrimonio;
+			$permanente->permanente = $permanente;
 			
 			if($item->save()){
 				$msg = "Objeto salvo com sucesso!";

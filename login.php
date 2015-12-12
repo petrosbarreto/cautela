@@ -16,8 +16,6 @@
   $usuario = isset($_POST['usuario']) ? $_POST['usuario'] : null;
   $senha   = isset($_POST['senha']) ? $_POST['senha'] : null;
 	
-  
-  
   if($usuario != "" && isset($senha)) {
   	
   	if(checkUserAndPassword($usuario, $senha)) {
@@ -84,7 +82,7 @@
     <div class="container">
       <form class="form-signin" role="form" action="login.php" method="post">
         <h2 class="form-signin-heading">Cautelas - OnLine</h2>
-        <label for="input" class="sr-only">Usuario</label>
+        <label for="input" class="sr-only">Usuário</label>
         <input type="input" id="input" name="usuario" class="form-control" placeholder="Usuario" required autofocus>
         <label for="inputPassword" class="sr-only">Senha</label>
         <input type="password" id="senha" name="senha" class="form-control" placeholder="Senha" required>

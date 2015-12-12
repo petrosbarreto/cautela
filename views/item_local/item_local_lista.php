@@ -64,7 +64,7 @@
       </tr>
     </thead>
     <tbody>
-      <?php $query = "1=1";
+      <?php $query = "1=1 and descarregado = 0 ";
       		$joins = array();
        
       	if(isset($_GET['patrimonio'])) {

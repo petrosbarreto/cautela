@@ -50,6 +50,7 @@
             <li><a href="<?php echo $BASE ?>views/item_tipo/item_tipo_lista.php">Tipo de Item</a></li>
             <li><a href="<?php echo $BASE ?>views/local/local_lista.php">Local</a></li>
             <li><a href="<?php echo $BASE ?>views/local_tipo/local_tipo_lista.php">Tipo Local</a></li>
+            <li><a href="<?php echo $BASE ?>views/cautela_situacao/cautela_situacao_lista.php">Situação Cautela</a></li>
           </ul>
         </li>
         <li class="dropdown">

@@ -14,7 +14,7 @@
       <div class="form-group">
           <input type="text"
                placeholder="Patrimônio" id="patrimonio" name="patrimonio"
-               value="" class="form-control">
+               value="" size="6" class="form-control">
       </div>
       <div class="form-group">
           <input type="text"
@@ -39,6 +39,11 @@
           <?php } ?>
           </select>
       </div>
+      <div class="form-group">
+          <input type="checkbox"
+               placeholder="Permanente?" id="permanente" name="permanente"
+               value="1" class="form-control">Permanente?</input>
+      </div>
       <button type="submit" class="btn btn-info" onclick="jQuery('#action').val('index')">
       	<span class="glyphicon glyphicon-search">&nbsp;</span>Buscar</button>
       <button type="submit" class="btn btn-success" onclick="jQuery('#action').val('new')">
@@ -55,12 +60,13 @@
         <th>Descrição</th>
         <th>Qtd. Total</th>
         <th>Tipo</th>
+        <th>Permanente?</th>
         <th>Acao</th>
       </tr>
     </thead>
     <tbody>
       <?php
-      	$query = "1=1";
+      	$query = "1=1 and descarregado = 0 ";
        
       	if(isset($_GET['patrimonio'])) {
       		$patrimonio = $_GET['patrimonio'];
@@ -82,6 +88,7 @@
         <td><?php echo $item->descricao ?></td>
         <td><?php echo $item->qtd_total ?></td>
         <td><?php echo $item->item_tipo->descricao ?></td>
+        <td><?php echo $item->permanente ? "SIM" : "NÃO" ?></td>
         <td>
           <a href="item_form.php?action=update&id=<?php echo $item->id ?>">
           <button type="button" class="btn btn-default btn-xs">

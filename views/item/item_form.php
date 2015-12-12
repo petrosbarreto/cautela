@@ -21,7 +21,7 @@
     		</div>
   		</div>
   		<div class="form-group">
-  			<label for="id" class="col-sm-2 control-label">Patrimônio</label>
+  			<label for="patrimonio" class="col-sm-2 control-label">Patrimônio</label>
   			<div class="col-sm-10">
 	    		<input type="text" class="form-control"
 	    			   placeholder="Patrimônio" id="patrimonio" name="patrimonio"
@@ -29,7 +29,7 @@
     		</div>
   		</div>
   		<div class="form-group">
-  			<label for="id" class="col-sm-2 control-label">Nome</label>
+  			<label for="nome" class="col-sm-2 control-label">Nome</label>
   			<div class="col-sm-10">
 	    		<input type="text" class="form-control" required="true"
 	    			   placeholder="Nome" id="nome" name="nome"
@@ -37,7 +37,7 @@
     		</div>
   		</div>
   		<div class="form-group">
-  			<label for="id" class="col-sm-2 control-label">Descrição</label>
+  			<label for="descricao" class="col-sm-2 control-label">Descrição</label>
   			<div class="col-sm-10">
 	    		<input type="text" class="form-control" required="true"
 	    			   placeholder="Descrição" id="descricao" name="descricao"
@@ -45,7 +45,7 @@
     		</div>
   		</div>
   		<div class="form-group">
-  			<label for="id" class="col-sm-2 control-label">Qtd. Total</label>
+  			<label for="qtd_total" class="col-sm-2 control-label">Qtd. Total</label>
   			<div class="col-sm-10">
 	    		<input type="text" class="form-control" required="true"
 	    			   placeholder="Qtd. Total" id="qtd_total" name="qtd_total"
@@ -61,6 +61,14 @@
 	          <?php } ?>
 	          </select>
           	</div>
+  		</div>
+  		<div class="form-group">
+  			<label for="permanente" class="col-sm-2 control-label">Permanente?</label>
+  			<div class="col-sm-10">
+	    		<input type="checkbox" class="form-control"
+	    			   placeholder="Permanente" id="permanente" name="permanente"
+	    			   <?php echo $item->permanente ? "checked" : "" ?> value="1"></input>
+    		</div>
   		</div>
   		<div class="form-group">
   			<div class="col-sm-offset-2 col-sm-10">
