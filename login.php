@@ -5,10 +5,18 @@
 
   require_once "includes/database.config.php";
   require_once "includes/ldap.php";
-
+	
+  $url_entrada = "views/item_local/item_local_lista.php";
+  
+  #verificar se ja esta autenticado
+  if(isset($_SESSION['idusuario'])) {
+  	header('Location: '.$url_entrada);
+  }
+  
   $usuario = isset($_POST['usuario']) ? $_POST['usuario'] : null;
   $senha   = isset($_POST['senha']) ? $_POST['senha'] : null;
-
+	
+  
   
   if($usuario != "" && isset($senha)) {
   	
@@ -25,14 +33,14 @@
   		$_SESSION['idusuario'] = $objUsuario->id;
   		$_SESSION['nomeusuario'] = $objUsuario->login;
   		$_COOKIE['idusuario'] = $objUsuario->id;
-  		header('Location: '."views/item_tipo/item_tipo_lista.php");
+  		header('Location: '.$url_entrada);
   	} else {
   		$objUsuario = Usuario::find('first', array('conditions' => "login = '$usuario' and senha = md5('$senha')"));
   		if($objUsuario) {
   			$_SESSION['idusuario'] = $objUsuario->id;
   			$_SESSION['nomeusuario'] = $objUsuario->login;
   			$_COOKIE['idusuario'] = $objUsuario->id;
-  			header('Location: '."views/item_tipo/item_tipo_lista.php");
+  			header('Location: '.$url_entrada);
   		} else {
   			$msg_erro = "Usuario ou senha invalida!!";
   		}

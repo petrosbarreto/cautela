@@ -12,35 +12,32 @@
     <form class="form-inline" role="form" action="../../controllers/itemcontroller.php" method="post">
       <input type="hidden" id="action" name="action" value="new"/>
       <div class="form-group">
-        <div class="col-sm-10">
           <input type="text"
                placeholder="Patrimônio" id="patrimonio" name="patrimonio"
                value="" class="form-control">
-        </div>
       </div>
       <div class="form-group">
-        <div class="col-sm-10">
           <input type="text"
                placeholder="Nome" id="nome" name="nome"
                value="" class="form-control">
-        </div>
       </div>
       <div class="form-group">
-        <div class="col-sm-10">
+          <input type="text"
+               placeholder="Descrição" id="descricao" name="descricao"
+               value="" class="form-control">
+      </div>
+      <div class="form-group">
           <input type="text" required="true"
                placeholder="Quantidade" id="qtd_total" name="qtd_total"
                value="1" size="2" class="form-control">
-        </div>
       </div>
       <div class="form-group">
-        <div class="col-sm-10">
           <select id="item_tipo_id" name="item_tipo_id" class="form-control" >
           	<option value="">Todos</option>
           <?php foreach (ItemTipo::find('all', array('order' => 'descricao asc')) as $itemtipo) { ?>
           	<option value="<?php echo $itemtipo->id ?>"><?php echo $itemtipo->descricao ?></option>
           <?php } ?>
           </select>
-        </div>
       </div>
       <button type="submit" class="btn btn-info" onclick="jQuery('#action').val('index')">
       	<span class="glyphicon glyphicon-search">&nbsp;</span>Buscar</button>

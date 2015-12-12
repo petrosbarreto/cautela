@@ -44,11 +44,21 @@
     </div>
     <div id="navbar" class="collapse navbar-collapse">
       <ul class="nav navbar-nav">
-        <li><a href="<?php echo $BASE ?>views/item_tipo/item_tipo_lista.php">Item Tipo</a></li>
-        <li><a href="<?php echo $BASE ?>views/item/item_lista.php">Item</a></li>
-        <li><a href="<?php echo $BASE ?>views/local_tipo/local_tipo_lista.php">Local Tipo</a></li>
-        <li><a href="<?php echo $BASE ?>views/local/local_lista.php">Local</a></li>
-        <li><a href="<?php echo $BASE ?>views/item_local/item_local_lista.php">Item Local</a></li>
+      	<li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Cadastro Básico <span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li><a href="<?php echo $BASE ?>views/item_tipo/item_tipo_lista.php">Tipo de Item</a></li>
+            <li><a href="<?php echo $BASE ?>views/local/local_lista.php">Local</a></li>
+            <li><a href="<?php echo $BASE ?>views/local_tipo/local_tipo_lista.php">Tipo Local</a></li>
+          </ul>
+        </li>
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Controle Material<span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li><a href="<?php echo $BASE ?>views/item/item_lista.php">Controle Item</a></li>
+            <li><a href="<?php echo $BASE ?>views/item_local/item_local_lista.php">Controle Armazenagem</a></li>
+          </ul>
+        </li>
         <li><a href="<?php echo $BASE ?>logout.php">Logout (<?php echo $_SESSION['nomeusuario'] ?>)</a></li>
       </ul>
     </div><!--/.nav-collapse -->
